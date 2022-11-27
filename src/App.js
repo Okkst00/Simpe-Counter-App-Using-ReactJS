@@ -33,9 +33,9 @@ const App = () => {
               <Row className="justify-content-center">
                 <Col className="col-12">
                   <div className="button justify-content-center" style={styles.button}>
-                    <button className="btn shadow px-3" style={styles.btnMin}
+                    <button className="btn btn-danger shadow px-3" style={styles.btnMin}
                       onClick={handleClickMin}><i class="bi bi-dash"></i> Minus</button>
-                    <button className="btn shadow px-3" style={styles.btnPlus}
+                    <button className="btn btn-success shadow px-3" style={styles.btnPlus}
                       onClick={handleClickPlus}><i class="bi bi-plus"></i> Plus</button>
                   </div>
                 </Col>
@@ -85,7 +85,6 @@ const styles = {
     btnMin : {
       fontSize: '1.5rem',
       top: '20vh',
-      backgroundColor: 'red',
       borderRadius: 16,
       color: 'white',
       cursor:'pointer'
@@ -95,7 +94,6 @@ const styles = {
       fontSize: '1.5rem',
       top: '20vh',
       marginLeft: '25px',
-      backgroundColor: 'green',
       borderRadius: 16,
       color: 'white',
       cursor: 'pointer'
