@@ -7,36 +7,66 @@ import './App.css';
 
 const App = () => {
 
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(0) 
   
     const handleClickPlus = () => {
       setCounter(counter + 1)
     }
     
-
     const handleClickMin = () => { 
       setCounter(counter - 1)
+    }
+
+  const [counters, setCounters] = useState(0) 
+  
+    const handleClickPluss = () => {
+      setCounters(counters + 1)
+    }
+    
+    const handleClickMins = () => { 
+      setCounters(counters - 1)
     }
   
   return (
     
       <Container>
         <Row className="justify-content-center">
-          <Col>
-            <div style={styles.mainContent} className="justify-content-center">
-              <h1 style={styles.header}>
-                Counter App <i class="bi bi-check-circle-fill"></i>
+          <Col className="col col-lg-12">
+            <div className="mainContent justify-content-center">
+              <h1 className="header text-center shadow">
+                Counter Score <i class="bi bi-layout-sidebar-inset-reverse"></i>
               </h1>
-              <div className="shadow" style={styles.mainText}>
-                {counter}
-              </div>
-              <Row className="justify-content-center">
-                <Col className="col-12">
-                  <div className="button justify-content-center" style={styles.button}>
-                    <button className="btn btn-danger shadow px-3" style={styles.btnMin}
+              <Row className="justify-content-center align-item-center">
+                <Col className="col col-lg-6 col-md-6 col-6">
+                  <Row className="justify-content-center">
+                    <h2 className="text-center club mt-5 px-5 py-2 rounded-5">Club A</h2>
+                  </Row>
+                  <Row className="justify-content-center">
+                    <div className="mainText shadow text-center mx-lg-5">
+                      {counter}
+                    </div>
+                  </Row>
+                  <div className="button text-center">
+                    <button className="btn btnMin btn-danger shadow px-lg-3 px-md-4 px-4"
                       onClick={handleClickMin}><i class="bi bi-dash"></i> Minus</button>
-                    <button className="btn btn-success shadow px-3" style={styles.btnPlus}
+                    <button className="btn btnPlus btn-success shadow px-lg-3 px-md-4 px-4"
                       onClick={handleClickPlus}><i class="bi bi-plus"></i> Plus</button>
+                  </div>
+                </Col>
+                <Col className="col col-lg-6 col-md-6 col-6">
+                  <Row className="justify-content-center">
+                    <h2 className="text-center club mt-5 px-5 py-2 rounded-5">Club B</h2>
+                  </Row>
+                  <Row className="justify-content-center">
+                    <div className="mainText shadow text-center mx-lg-5">
+                      {counters}
+                    </div>
+                  </Row>
+                  <div className="button text-center">
+                    <button className="btn btnMin btn-danger shadow px-lg-3 px-md-4 px-4"
+                      onClick={handleClickMins}><i class="bi bi-dash"></i> Minus</button>
+                    <button className="btn btnPlus btn-success shadow px-lg-3 px-md-4 px-4"
+                      onClick={handleClickPluss}><i class="bi bi-plus"></i> Plus</button>
                   </div>
                 </Col>
               </Row>
@@ -48,60 +78,5 @@ const App = () => {
   )
 }
 
-const styles = {
-
-    mainContent : {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      fontSize: '300%',
-      width: '100%',
-      height: '100%',
-      marginTop: 50
-    },
-
-    header : {
-      fontSize: 42,
-      color: 'black'
-    },
-
-    mainText : {
-      fontSize: '1.9em',
-      position: 'relative',
-      top: '.5em',
-      color: 'white',
-      backgroundColor: '#D4870C',
-      paddingLeft: 50,
-      paddingRight: 50,
-      paddingBottom: 10,
-      borderRadius: 25
-    },
-
-    button : {
-      marginTop: '2em',
-    },
-
-    btnMin : {
-      fontSize: '1.5rem',
-      top: '20vh',
-      borderRadius: 16,
-      color: 'white',
-      cursor:'pointer'
-    },
-
-    btnPlus : {
-      fontSize: '1.5rem',
-      top: '20vh',
-      marginLeft: '25px',
-      borderRadius: 16,
-      color: 'white',
-      cursor: 'pointer'
-    }
-
-}
-  
-
 export default App;
-
 
